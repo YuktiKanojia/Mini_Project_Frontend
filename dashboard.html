@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurants — TongueTreat</title>
+  <meta name="description" content="Browse TongueTreat restaurants and choose your favourite food." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TongueTreat</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Restaurants</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wave"></div>
+
+  <main class="wrap" style="padding-top:40px;">
+
+    <span class="sticker">🍽️ Pick your restaurant</span>
+
+    <h1 style="font-size:48px; margin:14px 0 8px;">Restaurants</h1>
+
+    <p class="section-sub">
+      Choose a place, explore its menu and add your favourite treats.
+    </p>
+
+
+    <div class="filter-box panel">
+
+      <h2 style="font-size:28px;">Find your food</h2>
+
+      <div class="filter-grid">
+
+        <div>
+          <label for="cuisineFilter">Cuisine</label>
+          <select id="cuisineFilter">
+            <option value="all">All Cuisines</option>
+            <option value="Indian">Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="Chinese">Chinese / Asian</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Multi-cuisine">Multi-cuisine</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="ratingFilter">Rating</label>
+          <select id="ratingFilter">
+            <option value="all">Any Rating</option>
+            <option value="4.5">4.5★ and above</option>
+            <option value="4.0">4.0★ and above</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="priceFilter">Price</label>
+          <select id="priceFilter">
+            <option value="all">Any Price</option>
+            <option value="1">Budget ₹</option>
+            <option value="2">Medium ₹₹</option>
+            <option value="3">Premium ₹₹₹</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="timeFilter">Delivery Time</label>
+          <select id="timeFilter">
+            <option value="all">Any Time</option>
+            <option value="30">30 min or less</option>
+            <option value="40">40 min or less</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="vegFilter">Veg / Non-Veg</label>
+          <select id="vegFilter">
+            <option value="all">All</option>
+            <option value="veg">Veg</option>
+            <option value="nonveg">Non-Veg</option>
+          </select>
+        </div>
+
+      </div>
+
+      <p id="restaurantCount" class="filter-count"></p>
+
+    </div>
+
+
+    <div class="restaurant-grid" id="restaurantGrid">
+
+
+      <!-- 1. HALDIRAM'S -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.6"
+           data-price="2"
+           data-time="30"
+           data-type="veg">
+
+        <img src="images/restaurants/haldirams.jpg" alt="Haldiram's food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Veg</span>
+
+          <h2>Haldiram's</h2>
+
+          <p>
+            Classic Indian snacks, thalis, sweets and comforting favourites.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.6</span>
+            <span>30 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=haldirams" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 2. SPICE ROUTE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.8"
+           data-price="3"
+           data-time="35"
+           data-type="nonveg">
+
+        <img src="images/restaurants/spice-route.jpg" alt="Spice Route food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Non-Veg</span>
+
+          <h2>Spice Route</h2>
+
+          <p>
+            Royal biryanis, rich curries and bold North Indian flavours.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.8</span>
+            <span>35 min</span>
+            <span>₹₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=spiceroute" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 3. LA TAVOLA -->
+
+      <div class="restaurant-card"
+           data-cuisine="Italian"
+           data-rating="4.7"
+           data-price="2"
+           data-time="28"
+           data-type="veg">
+
+        <img src="images/restaurants/la-tavola.jpg" alt="La Tavola food">
+
+        <div class="restaurant-body">
+          <span class="pill pasta">Italian • Veg</span>
+
+          <h2>La Tavola</h2>
+
+          <p>
+            Fresh pasta, creamy sauces and cosy Italian comfort food.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.7</span>
+            <span>28 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=latavola" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 4. WOK & ROLL -->
+
+      <div class="restaurant-card"
+           data-cuisine="Chinese"
+           data-rating="4.5"
+           data-price="2"
+           data-time="32"
+           data-type="nonveg">
+
+        <img src="images/restaurants/wok-and-roll.jpg" alt="Wok & Roll food">
+
+        <div class="restaurant-body">
+          <span class="pill sky-pill">Chinese • Non-Veg</span>
+
+          <h2>Wok & Roll</h2>
+
+          <p>
+            Hot wok noodles, dumplings and Asian street-food favourites.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.5</span>
+            <span>32 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=wokandroll" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 5. SUGAR CLOUD -->
+
+      <div class="restaurant-card"
+           data-cuisine="Dessert"
+           data-rating="4.9"
+           data-price="2"
+           data-time="25"
+           data-type="veg">
+
+        <img src="images/restaurants/sugar-cloud.jpg" alt="Sugar Cloud food">
+
+        <div class="restaurant-body">
+          <span class="pill sweet">Dessert • Veg</span>
+
+          <h2>Sugar Cloud</h2>
+
+          <p>
+            Cakes, tarts, mousse jars and sweet treats for every mood.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.9</span>
+            <span>25 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=sugarcloud" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 6. URBAN PLATE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Multi-cuisine"
+           data-rating="4.4"
+           data-price="1"
+           data-time="30"
+           data-type="veg">
+
+        <img src="images/restaurants/urban-plate.jpg" alt="Urban Plate food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Multi-cuisine • Veg</span>
+
+          <h2>Urban Plate</h2>
+
+          <p>
+            Easy-going comfort food with Indian, Italian and Asian picks.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.4</span>
+            <span>30 min</span>
+            <span>₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=urbanplate" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 7. PUNJABI GRILL -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.7"
+           data-price="2"
+           data-time="33"
+           data-type="nonveg">
+
+        <img src="images/restaurants/punjabi-grill.png" alt="Punjabi Grill food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Non-Veg</span>
+
+          <h2>Punjabi Grill</h2>
+
+          <p>
+            Hearty Punjabi flavours, tandoor favourites and rich gravies.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.7</span>
+            <span>33 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=punjabigrill" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 8. DILLI 6 -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.6"
+           data-price="1"
+           data-time="29"
+           data-type="veg">
+
+        <img src="images/restaurants/dilli-6.jpg" alt="Dilli 6 food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Veg</span>
+
+          <h2>Dilli 6</h2>
+
+          <p>
+            Street-style North Indian favourites with homestyle comfort.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.6</span>
+            <span>29 min</span>
+            <span>₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=dilli6" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 9. SOUTH SPICE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.8"
+           data-price="2"
+           data-time="31"
+           data-type="veg">
+
+        <img src="images/restaurants/south-spice.jpg" alt="South Spice food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Veg</span>
+
+          <h2>South Spice</h2>
+
+          <p>
+            Crispy dosas, fluffy idlis and flavourful South Indian meals.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.8</span>
+            <span>31 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=southspice" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 10. ROYAL RAJASTHAN -->
+
+      <div class="restaurant-card"
+           data-cuisine="Indian"
+           data-rating="4.7"
+           data-price="3"
+           data-time="38"
+           data-type="veg">
+
+        <img src="images/restaurants/royal-rajasthan.jpg" alt="Royal Rajasthan food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Indian • Veg</span>
+
+          <h2>Royal Rajasthan</h2>
+
+          <p>
+            Royal Rajasthani thalis, breads and traditional sweets.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.7</span>
+            <span>38 min</span>
+            <span>₹₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=royalrajasthan" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 11. PASTA BELLA -->
+
+      <div class="restaurant-card"
+           data-cuisine="Italian"
+           data-rating="4.8"
+           data-price="3"
+           data-time="27"
+           data-type="veg">
+
+        <img src="images/restaurants/pasta-bella.jpg" alt="Pasta Bella food">
+
+        <div class="restaurant-body">
+          <span class="pill pasta">Italian • Veg</span>
+
+          <h2>Pasta Bella</h2>
+
+          <p>
+            Handcrafted pasta and elegant Italian comfort food.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.8</span>
+            <span>27 min</span>
+            <span>₹₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=pastabella" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 12. PIZZA ROMA -->
+
+      <div class="restaurant-card"
+           data-cuisine="Italian"
+           data-rating="4.6"
+           data-price="2"
+           data-time="24"
+           data-type="veg">
+
+        <img src="images/restaurants/pizza-roma.jpg" alt="Pizza Roma food">
+
+        <div class="restaurant-body">
+          <span class="pill pasta">Italian • Veg</span>
+
+          <h2>Pizza Roma</h2>
+
+          <p>
+            Thin-crust pizzas, cheesy sides and Italian classics.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.6</span>
+            <span>24 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=pizzaroma" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 13. TOKYO BOWL -->
+
+      <div class="restaurant-card"
+           data-cuisine="Chinese"
+           data-rating="4.7"
+           data-price="2"
+           data-time="30"
+           data-type="nonveg">
+
+        <img src="images/restaurants/tokyo-bowl.jpg" alt="Tokyo Bowl food">
+
+        <div class="restaurant-body">
+          <span class="pill sky-pill">Chinese • Non-Veg</span>
+
+          <h2>Tokyo Bowl</h2>
+
+          <p>
+            Japanese-inspired bowls, noodles and Asian favourites.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.7</span>
+            <span>30 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=tokyobowl" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 14. DRAGON WOK -->
+
+      <div class="restaurant-card"
+           data-cuisine="Chinese"
+           data-rating="4.5"
+           data-price="1"
+           data-time="34"
+           data-type="veg">
+
+        <img src="images/restaurants/dragon-wok.jpg" alt="Dragon Wok food">
+
+        <div class="restaurant-body">
+          <span class="pill sky-pill">Chinese • Veg</span>
+
+          <h2>Dragon Wok</h2>
+
+          <p>
+            Affordable wok dishes, dumplings and spicy Asian plates.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.5</span>
+            <span>34 min</span>
+            <span>₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=dragonwok" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 15. SWEET TOOTH -->
+
+      <div class="restaurant-card"
+           data-cuisine="Dessert"
+           data-rating="4.8"
+           data-price="2"
+           data-time="22"
+           data-type="veg">
+
+        <img src="images/restaurants/sweet-tooth.jpg" alt="Sweet Tooth food">
+
+        <div class="restaurant-body">
+          <span class="pill sweet">Dessert • Veg</span>
+
+          <h2>Sweet Tooth</h2>
+
+          <p>
+            Playful cakes, ice creams and dessert jars.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.8</span>
+            <span>22 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=sweettooth" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 16. COCOA HOUSE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Dessert"
+           data-rating="4.9"
+           data-price="3"
+           data-time="20"
+           data-type="veg">
+
+        <img src="images/restaurants/cocoa-house.jpg" alt="Cocoa House food">
+
+        <div class="restaurant-body">
+          <span class="pill sweet">Dessert • Veg</span>
+
+          <h2>Cocoa House</h2>
+
+          <p>
+            Premium chocolate desserts, pastries and celebration cakes.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.9</span>
+            <span>20 min</span>
+            <span>₹₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=cocoahouse" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 17. THE FOOD YARD -->
+
+      <div class="restaurant-card"
+           data-cuisine="Multi-cuisine"
+           data-rating="4.3"
+           data-price="1"
+           data-time="36"
+           data-type="nonveg">
+
+        <img src="images/restaurants/food-yard.jpg" alt="The Food Yard food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Multi-cuisine • Non-Veg</span>
+
+          <h2>The Food Yard</h2>
+
+          <p>
+            A big casual menu with Indian, Italian and Asian choices.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.3</span>
+            <span>36 min</span>
+            <span>₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=foodyard" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 18. CAFE BLOOM -->
+
+      <div class="restaurant-card"
+           data-cuisine="Multi-cuisine"
+           data-rating="4.5"
+           data-price="2"
+           data-time="26"
+           data-type="veg">
+
+        <img src="images/restaurants/cafe-bloom.jpg" alt="Cafe Bloom food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Multi-cuisine • Veg</span>
+
+          <h2>Cafe Bloom</h2>
+
+          <p>
+            Café classics, pasta, sandwiches and sweet treats.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.5</span>
+            <span>26 min</span>
+            <span>₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=cafebloom" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 19. STREET SPICE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Multi-cuisine"
+           data-rating="4.4"
+           data-price="1"
+           data-time="32"
+           data-type="nonveg">
+
+        <img src="images/restaurants/street-spice.jpg" alt="Street Spice food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Multi-cuisine • Non-Veg</span>
+
+          <h2>Street Spice</h2>
+
+          <p>
+            Fun street-food inspired meals from across Asia and India.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.4</span>
+            <span>32 min</span>
+            <span>₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=streetspice" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 20. THE GRAND TABLE -->
+
+      <div class="restaurant-card"
+           data-cuisine="Multi-cuisine"
+           data-rating="4.9"
+           data-price="3"
+           data-time="40"
+           data-type="veg">
+
+        <img src="images/restaurants/grand-table.jpg" alt="The Grand Table food">
+
+        <div class="restaurant-body">
+          <span class="pill ">Multi-cuisine • Veg</span>
+
+          <h2>The Grand Table</h2>
+
+          <p>
+            A premium multi-cuisine menu for special meals.
+          </p>
+
+          <div class="restaurant-meta">
+            <span>⭐ 4.9</span>
+            <span>40 min</span>
+            <span>₹₹₹</span>
+          </div>
+
+          <a href="menu.html?restaurant=grandtable" class="btn small">
+            View Menu
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div id="noRestaurants" class="panel empty-box" style="display:none;">
+      <h2>No restaurants found</h2>
+      <p>Try changing one of the filters.</p>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="wrap">
+      <div class="logo">TongueTreat</div>
+      <p>Made with love, butter and lots of sprinkles. © 2026 TongueTreat</p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — TongueTreat</title>
+  <meta name="description" content="Log in to TongueTreat and get pasta, veg mains and desserts delivered hot." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TongueTreat</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Restaurants</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+  <div class="wave"></div>
+
+  <main class="wrap login-split">
+    <div class="login-art">
+      <img src="logooo.jpg" alt="">
+      <!-- <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80" alt="Colourful plate of food on a table" /> -->
+    </div>
+
+    <div class="panel">
+      <span class="sticker">👋 Welcome back</span>
+      <h1 style="font-size:44px; margin-top:14px;">Log In</h1>
+      <p>Your treats are waiting patiently.</p>
+
+      <form onsubmit="fakeLogin(event)">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="yum@tonguetreat.com" required />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" required />
+
+        <div style="margin-top:26px;">
+          <button class="btn" type="submit">Let Me In 🍴</button>
+        </div>
+      </form>
+
+      <p style="margin-top:22px; font-weight:700;">
+        New here? <a href="dashboard.html" style="text-decoration:underline;">Browse the menu first</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="logo">TongueTreat</div>
+      <p>Made with love, butter and lots of sprinkles. © 2026 TongueTreat</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

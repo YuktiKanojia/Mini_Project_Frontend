@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TongueTreat — Food Delivery, Fast &amp; Fresh</title>
+
+  <meta name="description"
+        content="TongueTreat delivers creamy pastas, hearty veg mains and dreamy desserts to your door in 30 minutes." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TongueTreat</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Restaurants</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wave"></div>
+
+
+  <!-- ===== HERO ===== -->
+  <header class="hero wrap">
+
+    <div>
+      <span class="sticker">🚚 30 minute delivery</span>
+
+      <h1>
+        Big Flavour,<br />
+        <span class="wordy">Bigger</span> Bites!
+      </h1>
+
+      <p class="hand" style="font-size:19px; margin:18px 0 0;">
+        …and yes, dessert counts as dinner 🍰
+      </p>
+
+      <p>
+        Creamy pastas, hearty veggie mains and dreamy desserts — cooked fresh
+        and rushed to your door while it is still steaming hot.
+      </p>
+
+      <a href="dashboard.html" class="btn">Order Now 🍝</a>
+      <a href="dashboard.html" class="btn mint">Browse Restaurants</a>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-art">
+        <img
+          src="ravioli.jpg"
+          alt="Delicious pasta dish"
+        />
+      </div>
+
+      <div class="blob one">FREE<br />DELIVERY</div>
+      <div class="blob two">100%<br />FRESH</div>
+    </div>
+
+  </header>
+
+
+  <!-- ===== MARQUEE STRIP ===== -->
+  <div class="strip">
+    <span>
+      🍝 PASTA &nbsp;•&nbsp;
+      🍰 DESSERTS &nbsp;•&nbsp;
+      🥗 VEG MAINS &nbsp;•&nbsp;
+      🚚 HOT DELIVERY &nbsp;•&nbsp;
+      🍝 PASTA &nbsp;•&nbsp;
+      🍰 DESSERTS &nbsp;•&nbsp;
+      🥗 VEG MAINS &nbsp;•&nbsp;
+      🚚 HOT DELIVERY &nbsp;•&nbsp;
+    </span>
+  </div>
+
+
+  <!-- ===== TODAY'S PICKS ===== -->
+  <section class="wrap" id="menu">
+
+    <h2 class="section-title">Today's Picks</h2>
+
+    <p class="section-sub">
+      Tap a dish to add it to your cart 👇
+    </p>
+
+    <!-- JavaScript loads 8 existing restaurant dishes here -->
+    <div class="grid" id="todayPicksGrid"></div>
+
+  </section>
+
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="wrap">
+
+    <h2 class="section-title">How It Works</h2>
+
+    <p class="section-sub">
+      Three chunky steps, zero fuss.
+    </p>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Pick your treat</h3>
+        <p>Scroll, drool, tap add.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <h3>We cook it fresh</h3>
+        <p>Made only after you order.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Doorbell rings</h3>
+        <p>Hot food in about 28 minutes.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== FEATURES ===== -->
+  <section class="wrap">
+
+    <h2 class="section-title">Why People Love Us</h2>
+
+    <p class="section-sub">
+      Chunky portions, tiny wait times.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="emoji">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Average delivery in 28 minutes flat.</p>
+      </div>
+
+      <div class="feature">
+        <div class="emoji">🌿</div>
+        <h3>Farm Fresh</h3>
+        <p>Veggies picked the very same morning.</p>
+      </div>
+
+      <div class="feature">
+        <div class="emoji">🍰</div>
+        <h3>Dessert Heaven</h3>
+        <p>Baked in-house, every single day.</p>
+      </div>
+
+      <div class="feature">
+        <div class="emoji">💛</div>
+        <h3>Happy Chefs</h3>
+        <p>Cooked with real love, not machines.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="wrap">
+
+    <h2 class="section-title">Happy Tummies</h2>
+
+    <p class="section-sub">
+      Real words from very full people.
+    </p>
+
+    <div class="reviews">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="hand">
+          "The Alfredo penne arrived hotter than my kitchen could manage."
+        </p>
+        <strong>— Aarav, Pune</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="hand">
+          "Berry tart is dangerous. I ordered three. No regrets."
+        </p>
+        <strong>— Meera, Kochi</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="hand">
+          "Finally veg mains that feel like a full meal, not a side."
+        </p>
+        <strong>— Dev, Jaipur</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <section class="wrap">
+
+    <div class="panel"
+         style="text-align:center; background:var(--peach);">
+
+      <h2 class="section-title">Hungry already?</h2>
+
+      <p class="section-sub">
+        Sign in and your treats are minutes away.
+      </p>
+
+      <a href="login.html" class="btn lilac">
+        Login &amp; Order 🍽️
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="wrap">
+
+      <div class="logo">TongueTreat</div>
+
+      <p>
+        Made with love, butter and lots of sprinkles.
+        © 2026 TongueTreat
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+
+</body>
+</html>

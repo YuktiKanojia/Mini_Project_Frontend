@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — TongueTreat</title>
+  <meta name="description" content="Restaurant menu on TongueTreat." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">TongueTreat</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Restaurants</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+  <div class="wave"></div>
+
+  <main class="wrap" style="padding-top:40px;">
+    <a href="dashboard.html" class="btn small mint">← Back to Restaurants</a>
+
+    <section class="restaurant-hero" id="restaurantHero">
+      <div class="restaurant-hero-image">
+        <img id="restaurantImage" src="" alt="Restaurant food">
+      </div>
+      <div>
+        <span class="sticker">⭐ <span id="restaurantRating">4.5</span></span>
+        <h1 id="restaurantName" style="font-size:48px; margin:14px 0 6px;">Restaurant</h1>
+        <p id="restaurantInfo" class="section-sub"></p>
+        <div class="menu-info-row">
+          <span id="restaurantCuisine"></span>
+          <span id="restaurantTime"></span>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Menu</h2>
+    <p class="section-sub">Choose your favourites and add them to the cart.</p>
+
+    <div class="filters menu-categories">
+      <button class="btn small" onclick="filterFood('all')">All</button>
+      <button class="btn small mint" onclick="filterFood('starter')">Starters</button>
+      <button class="btn small sky" onclick="filterFood('main')">Main Course</button>
+      <button class="btn small lilac" onclick="filterFood('dessert')">Desserts</button>
+    </div>
+
+    <div class="grid" id="foodGrid"></div>
+
+    <div id="menuMessage" class="panel empty-box" style="display:none;"></div>
+
+    <div style="margin:44px 0;">
+      <a href="cart.html" class="btn lilac">Go To Cart 🛒</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="logo">TongueTreat</div>
+      <p>Made with love, butter and lots of sprinkles. © 2026 TongueTreat</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
